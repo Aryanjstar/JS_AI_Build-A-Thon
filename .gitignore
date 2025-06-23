@@ -396,6 +396,10 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
+packages/agent/my-agent.agent.yaml
+agent/my-agent.agent.yaml
+my-agent.agent.yaml
+
 # JetBrains Rider
 *.sln.iml
 

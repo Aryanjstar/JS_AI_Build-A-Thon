@@ -34,10 +34,7 @@ server.tool(
         const usage = totalDiff > 0 ? (1 - idleDiff / totalDiff) * 100 : 0;
 
         return {
-            content: [{
-                type: "text",
-                text: `Average CPU usage: ${usage.toFixed(2)}%`
-            }],
+            content: [{ type: "text", text: `Average CPU usage: ${usage.toFixed(2)}%` }],
             isError: false
         };
     }
@@ -48,10 +45,7 @@ server.tool(
     "Get the hostname of the local machine",
     {},
     async () => ({
-        content: [{
-            type: "text",
-            text: `Hostname: ${os.hostname()}`
-        }],
+        content: [{ type: "text", text: `Hostname: ${os.hostname()}` }],
         isError: false
     })
 );
@@ -61,10 +55,7 @@ server.tool(
     "Get the architecture of the local machine",
     {},
     async () => ({
-        content: [{
-            type: "text",
-            text: `Architecture: ${os.arch()}`
-        }],
+        content: [{ type: "text", text: `Architecture: ${os.arch()}` }],
         isError: false
     })
 );
@@ -74,10 +65,7 @@ server.tool(
     "Get the uptime of the local machine in seconds",
     {},
     async () => ({
-        content: [{
-            type: "text",
-            text: `Uptime: ${os.uptime()} seconds`
-        }],
+        content: [{ type: "text", text: `Uptime: ${os.uptime()} seconds` }],
         isError: false
     })
 );

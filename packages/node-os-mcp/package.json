@@ -2,11 +2,15 @@
   "name": "node_os_mcp",
   "version": "0.0.1",
   "description": "My MCP Server",
-  "main": "./lib/src/index",
+  "main": "./lib/src/index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "ts-node src/index.ts sse"
-  },
+    "dev:sse": "nodemon --exec node --inspect=9239 --signal SIGINT -r ts-node/register ./src/index.ts sse",
+    "dev:stdio": "nodemon --quiet --exec node --signal SIGINT -r ts-node/register ./src/index.ts stdio",
+    "dev:inspector": "mcp-inspector",
+    "build": "tsc --build",
+    "start:sse": "node ./src/index.js sse",
+    "start:sdtio": "node ./src/index.js stdio"
+},
   "author": "",
   "license": "ISC",
   "dependencies": {

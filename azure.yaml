@@ -21,3 +21,6 @@ services:
     project: packages/webapp
     host: appservice
     language: js
+
+    env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
